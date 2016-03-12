@@ -12,9 +12,8 @@ for i in range(width):
 	for j in range (height):
 		data[i][j] = [0,0,0] if random.choice( [0] * 50 + [1] ) == 0 else [255,255,255] #[random.randrange(0,256),random.randrange(0,256),random.randrange(0,256)]
 
-
-#img = sm.toimage( data ).save("outfile.jpg")  # Create a PIL image
-#img.show()                      # View in default viewers
+sm.imsave('picture.jpg', data)
 
 # OR:
-sm.imsave('picture.jpg', data)
+#img = sm.toimage( data ).save("outfile.jpg")  # Create a PIL image
+#img.show()                                    # View in default viewers
